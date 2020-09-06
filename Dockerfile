@@ -17,4 +17,3 @@ RUN apk add npm && \
 
 FROM nginx:${NGINX_VERSION}@${NGINX_DIGEST} as server
 COPY --from=builder /kiwiirc/dist/ /usr/share/nginx/html/
-COPY config.json /usr/share/nginx/html/static/
